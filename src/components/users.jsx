@@ -32,7 +32,7 @@ const Users = () => {
         x === 2 || x === 3 || x === 4 ? number += ' человека' :
           number += ' человек'
       return <h1><span className='badge bg-primary'>{number} тусанёт с тобой сегодня</span></h1>
-    } else return <h1><span className='badge bg-danger'>Никто с тобой не тусанет</span></h1>
+    } else return <h1><span className='badge bg-danger'>Никто с тобой не тусанёт</span></h1>
   }
 
   if (users.length === 0) {

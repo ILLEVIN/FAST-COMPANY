@@ -8,26 +8,25 @@ function App() {
 
   const handleDelete = (userId) => {
     setUsers(users.filter((user) => user._id !== userId));
-  }
+  };
 
   const handleToggleBookMark = (id) => {
-    setUsers(prevState => prevState.map(user => user._id === id ? { ...user, bookmark: !user.bookmark } : user))
-  }
+    setUsers((prevState) =>
+      prevState.map((user) =>
+        user._id === id ? { ...user, bookmark: !user.bookmark } : user
+      )
+    );
+  };
 
   return (
     <>
-      <SearchStatus
-        key={users.length}
-        length={users.length}
-      />
+      <SearchStatus key={users.length} length={users.length} />
       <Users
         users={users}
         onDelete={handleDelete}
         onToggleBookMark={handleToggleBookMark}
       />
     </>
-
-  )
-
+  );
 }
-export default App
+export default App;

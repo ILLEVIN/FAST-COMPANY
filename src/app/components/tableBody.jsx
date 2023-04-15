@@ -17,14 +17,18 @@ const TableBody = ({ data, columns }) => {
     <tbody>
       {data.map((item) =>
         <tr key={item._id}>
-          {Object.keys(columns).map((column) =>
-            <td key={column}>
-              {renderContent(item, column)}
-            </td>
+          {Object.keys(columns).map((column) => {
+            return (
+              <td key={column} >
+                {renderContent(item, column)}
+              </td>
+            );
+          }
           )}
         </tr>
-      )}
-    </tbody>
+      )
+      }
+    </tbody >
   );
 };
 
